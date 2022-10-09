@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables */
+:root{
+    --navbar-height: 55px;
+}
+/* Navigation Bar */
+#navbar{
+    /* position: relative; */
+    display: flex;
+    align-items: center; /*for centering in X, use justify content*/
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.78;
+}
+#logo{
+    margin: 14px 30px;
+    margin-left: 14px;
+}
+#logo img{
+    
+     height: 49px;
+    width: 82px;
+    height: 51px;
+    width: 91px;
+    border: 3px solid #cca2a2cf;
+    border-radius: 22px;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.0rem;
+    /* color: white; */
+}
+#navbar ul li a{
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 50px;
+    border-radius: 20px;
+}
+#navbar ul li a:hover{
+    /* font-family: 'Kanit', sans-serif; */
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+
+
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 52px;
+    height: 550px;
+    align-items: center; /*Usually it aligns in y direction but when flex direction is column then it aligns in x direction*/
+    justify-content: center;
+
+}
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url('../images/bg2.jpg') no-repeat center center/cover;
+    height: 642px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.65;
+}
+
+
+
+
+#home h1{
+    color: rgb(35 40 115);
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bolder;
+}
+#home p{
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(22, 13, 13);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* Services section  */
+#services{
+    margin: 40px;
+    display: flex;
+
+}
+#services .box{
+border: 3px solid rgb(159, 4, 4);
+padding: 25px;
+margin: 2px 20px;
+border-radius: 70px;
+background-color: #e9e6f7;
+margin-bottom: 24px;
+}
+#small{
+    font-size: 2.124rem;
+}
+#services .box img{
+height: 168px;
+margin: auto;
+    display: block;
+/*  */
+}
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+}
+
+/* Clients */
+#client{
+/* height: 350px; */
+position: relative;
+}
+#client::before{
+    content: "";
+    position: absolute;
+    background-image: url('../images/bg1.jpg');
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.49;
+}
+#clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#clients img{
+    height: 97px;
+}
+.client-itm{
+    padding: 30px 55px;
+}
+
+#contact{
+position: relative;
+}
+.contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 35px; */
+    padding: 31px;
+}
+.contact-box input,.contact-box textarea{
+    width: 100%;
+
+}
+.contact-box form{
+    width: 40%;
+}
+.contact-box label{
+    font-size: 1.2rem;
+        font-family: 'Kanit', sans-serif;
+
+}
+#contact::before{
+content: "";
+position: absolute;
+/* top: 20px; */
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 0.69;
+background: url('../images/contact.jpg') no-repeat center center/cover;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 11px 25px;
+}
+
+
+/* Utility class, can use it at multiple places */
+.h-primary{
+    font-size: 3.5rem;
+    padding: 15px;
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+.h-secondary{
+    font-family: 'Ubuntu', sans-serif;
+        /* font-family: 'Baloo Bhai 2', cursive;  */
+        font-weight: 500;
+    font-size: 2.19rem;
+    padding: 15px;
+}
+.center{
+    text-align: center;
+}
+.btn{
+    padding: 5px 18px;
+    margin: 19px;
+    /* border: 2px solid black; */
+    border: 2px solid #d0b889;
+    background-color: #684a10;
+    color: #feffce;
+    box-shadow: 4px 4px 5px #0b5526;
+    font-size: 1.12rem;
+    border-radius: 11px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    
+}
+.btn:hover{
+    background-color: #352402;
+    color: rgb(241 144 154);
+}
+
+.btn:active {
+    box-shadow: 0 5px #4d3e3e;
+    transform: translateY(14px);
+
+}
